@@ -18,7 +18,7 @@ Even supports non-local solutions such as Openrouter, Cohere, OpenAI API, etc.
 requires python 3.8+
 
 ```bash
-  pip install git+https://github.com/jmoney7823956789378/oobabot
+  pip install git+https://github.com/BenevolenceMessiah/oobabot
 ```
 
 1. Install LLM loader with an OpenAI-compatible API.
