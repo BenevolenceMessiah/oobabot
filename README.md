@@ -27,7 +27,7 @@ requires python 3.8+
 1. [Install **`oobabot`** (see INSTALL.md)](./docs/INSTALL.md)
 
 ```bash
-~: pip install git+https://github.com/jmoney7823956789378/oobabot
+~: pip install git+https://github.com/BenevolenceMessiah/oobabot
 
 ~: oobabot --generate-config > config.yml
 
