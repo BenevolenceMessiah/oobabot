@@ -28,6 +28,7 @@ set "CUDA_HOME=%CUDA_PATH%"
 call "%CONDA_ROOT_PREFIX%\condabin\conda.bat" activate "%INSTALL_ENV_DIR%" || ( echo. && echo Miniconda hook not found. && goto end )
 
 pip install git+https://github.com/BenevolenceMessiah/oobabot
+oobabot --generate-config > config.yml
 
 @rem enter commands
 cmd /k "%*"
