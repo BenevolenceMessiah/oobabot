@@ -15,7 +15,25 @@ Even supports non-local solutions such as Openrouter, Cohere, OpenAI API, etc.
 
 
 ## Installation and Quick Start!
-requires python 3.8+
+
+
+<h3>oobabooga's text-generation-webui:</h3>
+
+1. Download `install_oobabot.bat` and `start_oobabot.bat` and place them in the root of your text-generation-webui folder.
+2. Run `install_oobabot.bat` to install.
+3. Create a [Discord bot account](https://discordpy.readthedocs.io/en/stable/discord.html), invite it to your server, and paste its authentication token into the newly generated `config.yml` on line 52: `discord_token:`.
+4. Edit line 31 in `config.yml` so that it reads something like: `persona_file: C:\ai\text-generation-webui\characters\charcter.yaml` in order to select the charcter you want. Also input the name of your character on line 18: `ai_name: charcter`. You may wish to add some `wakewords` (The bot will listen in all discord channels for one of these words to be mentioned, then reply to any messages it sees with a matching word).
+5. Scroll through `config.yml` and edit any Discord specfic settings (starting on line 48) and any oobabooga specfic settings (starting on line 122) that you may want to change from their default values.
+6. Once you have an instance of text-generation-webui up and running, start the Discord bot by running `start_oobabot.bat`.
+
+  <sub>***(Notes:)*** 
+  1. You can quickly generate an invite link via your Discord account, alternatively you can open `cmd_windows.bat` and run: ``oobabot --invite -c config.yml`` or download `invite_oobabot.bat` from this repo, place it in the root of the text-generation-webui folder, and run it.
+  2. If you are going to use multiple discord bots, consider creating a unique charcter `.yml` for each character and appending you `.bat` scripts rather than redoing the above steps 4-5 each time you want to switch. For example have `config_charcter_2` and run/edit the `.bat`(s) `oobabot -c config_chacter_2.yml`.</sub>
+
+  
+<h3>standalone:</h3>
+
+  requires python 3.8+
 
 ```bash
   pip install git+https://github.com/BenevolenceMessiah/oobabot
@@ -23,7 +41,7 @@ requires python 3.8+
 
 1. Install LLM loader with an OpenAI-compatible API.
      (optionally, skip this step and run via a cloud provider!
-1. Create [a Discord bot account](https://discordpy.readthedocs.io/en/stable/discord.html), invite it to your server, and note its authentication token.
+1. Create a [Discord bot account](https://discordpy.readthedocs.io/en/stable/discord.html), invite it to your server, and note its authentication token.
 1. [Install **`oobabot`** (see INSTALL.md)](./docs/INSTALL.md)
 
 ```bash
@@ -42,6 +60,7 @@ requires python 3.8+
 2024-03-26 17:20:21,700  INFO Starting oobabot, core version 0.2.3
 
 ```
+---
 
 ## Features
 
